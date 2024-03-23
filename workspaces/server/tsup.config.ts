@@ -16,7 +16,7 @@ export default defineConfig(async (): Promise<Options[]> => {
       },
       env: {
         API_URL: process.env['RENDER_EXTERNAL_URL']
-          ? `https://${process.env['RENDER_EXTERNAL_URL']}`
+          ? process.env['RENDER_EXTERNAL_URL']
           : 'http://localhost:8000',
         NODE_ENV: process.env['NODE_ENV'] || 'development',
       },
